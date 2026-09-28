@@ -1,0 +1,13 @@
+../Core/Src/main.c:71:13:DHT11_Pin_Output	1
+../Core/Src/main.c:83:13:DHT11_Pin_Input	1
+../Core/Src/main.c:95:13:DHT11_Delay_us	2
+../Core/Src/main.c:105:13:DHT11_DWT_Init	1
+../Core/Src/main.c:112:16:DHT11_WaitForState	3
+../Core/Src/main.c:131:16:DHT11_Read	10
+../Core/Src/main.c:223:17:MQ2_Read	2
+../Core/Src/main.c:245:5:main	6
+../Core/Src/main.c:447:6:SystemClock_Config	4
+../Core/Src/main.c:528:13:MX_ADC1_Init	3
+../Core/Src/main.c:580:13:MX_I2C1_Init	2
+../Core/Src/main.c:616:13:MX_GPIO_Init	1
+../Core/Src/main.c:665:6:Error_Handler	1

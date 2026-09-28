@@ -1,0 +1,14 @@
+../Core/Src/main.c:110:13:DHT11_Pin_Output	24	static
+../Core/Src/main.c:123:13:DHT11_Pin_Input	24	static
+../Core/Src/main.c:139:13:DHT11_Delay_us	24	static
+../Core/Src/main.c:156:13:DHT11_DWT_Init	4	static
+../Core/Src/main.c:170:16:DHT11_WaitForState	24	static
+../Core/Src/main.c:200:16:DHT11_Read	48	static
+../Core/Src/main.c:349:17:MQ2_Read	24	static
+../Core/Src/main.c:402:17:LDR_Read	24	static
+../Core/Src/main.c:458:5:main	40	static
+../Core/Src/main.c:867:6:SystemClock_Config	88	static
+../Core/Src/main.c:971:13:MX_ADC1_Init	24	static
+../Core/Src/main.c:1049:13:MX_I2C1_Init	8	static
+../Core/Src/main.c:1101:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:1193:6:Error_Handler	4	static,ignoring_inline_asm
