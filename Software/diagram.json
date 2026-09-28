@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "author": "Sriram",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-stm32-bluepill", "id": "stm32", "top": 20, "left": 20, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled",
+      "top": -112.06,
+      "left": 393.83,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "wokwi-gas-sensor",
+      "id": "mq2",
+      "top": 250,
+      "left": 400,
+      "attrs": { "ppm": "400", "threshold": "4.4" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht11",
+      "top": 250,
+      "left": 650,
+      "attrs": { "temperature": "19.2", "humidity": "59.5" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir",
+      "top": 400,
+      "left": 400,
+      "attrs": { "delayTime": "5", "inhibitTime": "1.2" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "button",
+      "top": 400,
+      "left": 650,
+      "attrs": { "color": "blue", "label": "MODE" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr",
+      "top": 400,
+      "left": 900,
+      "attrs": { "lux": "500", "threshold": "2.5", "rl10": "50", "gamma": "0.7" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 550,
+      "left": 400,
+      "attrs": { "color": "red", "label": "ALERT" }
+    },
+    { "type": "wokwi-resistor", "id": "r1", "top": 550, "left": 500, "attrs": { "value": "220" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 550,
+      "left": 650,
+      "attrs": { "color": "green", "label": "NORMAL" }
+    },
+    { "type": "wokwi-resistor", "id": "r2", "top": 550, "left": 750, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "stm32:B6", "oled:SCL", "green", [] ],
+    [ "stm32:B7", "oled:SDA", "blue", [] ],
+    [ "stm32:3V3.1", "oled:VCC", "red", [] ],
+    [ "stm32:GND.1", "oled:GND", "black", [] ],
+    [ "stm32:A0", "mq2:AO", "orange", [] ],
+    [ "stm32:5V.1", "mq2:VCC", "red", [] ],
+    [ "stm32:GND.2", "mq2:GND", "black", [] ],
+    [ "stm32:A1", "dht11:SDA", "yellow", [] ],
+    [ "stm32:3V3.1", "dht11:VCC", "red", [] ],
+    [ "stm32:GND.3", "dht11:GND", "black", [] ],
+    [ "stm32:A2", "pir:OUT", "purple", [] ],
+    [ "stm32:5V.1", "pir:VCC", "red", [] ],
+    [ "stm32:GND.2", "pir:GND", "black", [] ],
+    [ "stm32:A3", "button:1.l", "blue", [] ],
+    [ "stm32:GND.3", "button:2.l", "black", [] ],
+    [ "stm32:A4", "led1:A", "red", [] ],
+    [ "led1:C", "r1:1", "red", [] ],
+    [ "r1:2", "stm32:GND.1", "black", [] ],
+    [ "stm32:A5", "led2:A", "green", [] ],
+    [ "led2:C", "r2:1", "green", [] ],
+    [ "r2:2", "stm32:GND.1", "black", [] ],
+    [ "stm32:A6", "ldr:AO", "orange", [] ],
+    [ "stm32:3V3.1", "ldr:VCC", "red", [] ],
+    [ "stm32:GND.3", "ldr:GND", "black", [] ]
+  ],
+  "dependencies": {}
+}
